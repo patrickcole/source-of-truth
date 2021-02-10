@@ -60,6 +60,8 @@ console.log(x4 ||= 'x was falsy, so we see this message');
 
 If the value of `x` is either `null` or `undefined`, the value of `y` is reassigned. Useful for when properties do not currently exist on an object.
 
+Sources: [<sup>1</sup>](#source1)
+
 ```js
 // an object with just the property, 'id':
 const x5 = { id: '939bac' };
