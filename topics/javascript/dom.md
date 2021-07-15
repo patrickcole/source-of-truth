@@ -1,5 +1,38 @@
 # DOM
 
+## Remove Child
+
+`element.remove()`
+
+A utility function can be created to remove all children of a parent element:
+
+```js
+function removeAllChildren(el) {
+  while(el.firstElementChild) {
+    el.firstElementChild.remove();
+  }
+}
+```
+
+## innerHTML
+
+Using innerHTML to remove children or add children can have some performance issues.
+
+## textContent
+
+To remove inner children on an element, `textContent` tends to be much faster than `innerHTML`:
+
+```js
+el.innerHTML = "";    // tends to be slower
+el.textContent = "";  // faster than above
+```
+
+## replaceChildren
+
+```js
+el.replaceChildren(); // replaces all children with nothing
+```
+
 ## Element IDs Are Global Variables
 
 When an element has a declared `id` attribute, the value given to that id is available as a global reference. For example:
